@@ -15,5 +15,3 @@ ingredients.forEach((ingredient) => {
   items.classList.add("item");
   ulList.appendChild(items);
 });
-
-console.log(ulList);
