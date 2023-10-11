@@ -1,17 +1,18 @@
 const ingredients = [
-  'Potatoes',
-  'Mushrooms',
-  'Garlic',
-  'Tomatos',
-  'Herbs',
-  'Condiments',
+  "Potatoes",
+  "Mushrooms",
+  "Garlic",
+  "Tomatos",
+  "Herbs",
+  "Condiments",
 ];
 
-const ulList = document.querySelector('ul');
+const ulList = document.querySelector("ul");
 
-ingredients.forEach((ingredient) => {
+const markup = ingredients.map((ingredient) => {
   const items = document.createElement("li");
   items.textContent = ingredient;
   items.classList.add("item");
-  ulList.appendChild(items);
-});
+  return items;
+})
+ulList.append(...markup)
